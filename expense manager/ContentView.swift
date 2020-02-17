@@ -9,26 +9,32 @@ import SwiftUI
 import Combine
 import RealmSwift
 
+class FetchCategories: ObservableObject {
 
+   @Published var allCategories: Results<Catagory>?
+    
+    func getCategories(){
+      let realm = try! Realm()
+      allCategories = realm.objects(Catagory.self)
 
+   }
+}
 struct ContentView: View {
     @State private var isActive = false
-    var categories: Results<Catagory>?
-    init() {
-        let realm = try! Realm()
-        
-        categories = realm.objects(Catagory.self)
-        
-    }
+    @ObservedObject var categories = FetchCategories()
+    
     var body: some View {
         NavigationView {
             VStack {
                 NavigationLink(destination: AddCategoryView(), isActive: $isActive){
                     Text("")
                 }
-                List(self.categories!) { category in
-                    Text(category.name)
-                }
+                List() {
+                    ForEach(categories.allCategories!){ category in
+                        Text(category.name)
+                    }.onDelete(perform: self.delete)
+                    
+                }.onAppear(perform: categories.getCategories)
             }
         .navigationBarTitle("All Categories")
         .navigationBarItems(trailing:
@@ -41,6 +47,23 @@ struct ContentView: View {
             }).buttonStyle(PlainButtonStyle())
         )
         }
+    }
+    private func delete(at indexSet: IndexSet){
+        let realm = try! Realm()
+        var index = 0
+        indexSet.forEach {
+            index = $0
+        }
+        do {
+            try realm.write{
+                realm.delete(categories.allCategories![index])
+                print("deleted")
+//                categories.getCategories()
+            }
+        } catch {
+            print(error)
+        }
+        
     }
 }
 

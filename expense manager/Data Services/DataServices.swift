@@ -10,11 +10,11 @@ import RealmSwift
 
 class DataServices {
     
-    func getCategories(){
+    static func getCategories(){
         let realm = try! Realm()
         
         let data = realm.objects(Catagory.self)
         
-        
+//        return data
     }
 }
