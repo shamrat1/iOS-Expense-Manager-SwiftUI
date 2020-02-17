@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0452204623FA546C00713926 /* AddCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452204523FA546C00713926 /* AddCategoryView.swift */; };
+		0452204923FA575500713926 /* DataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452204823FA575400713926 /* DataServices.swift */; };
 		046E40A823F8F9630007EFDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E40A723F8F9630007EFDA /* AppDelegate.swift */; };
 		046E40AA23F8F9630007EFDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E40A923F8F9630007EFDA /* SceneDelegate.swift */; };
 		046E40AC23F8F9630007EFDA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E40AB23F8F9630007EFDA /* ContentView.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0452204523FA546C00713926 /* AddCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryView.swift; sourceTree = "<group>"; };
+		0452204823FA575400713926 /* DataServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServices.swift; sourceTree = "<group>"; };
 		046E40A423F8F9630007EFDA /* expense manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "expense manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		046E40A723F8F9630007EFDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		046E40A923F8F9630007EFDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0452204723FA56DD00713926 /* Data Services */ = {
+			isa = PBXGroup;
+			children = (
+				0452204823FA575400713926 /* DataServices.swift */,
+			);
+			path = "Data Services";
+			sourceTree = "<group>";
+		};
 		046E409B23F8F9630007EFDA = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +76,7 @@
 		046E40A623F8F9630007EFDA /* expense manager */ = {
 			isa = PBXGroup;
 			children = (
+				0452204723FA56DD00713926 /* Data Services */,
 				046E40A723F8F9630007EFDA /* AppDelegate.swift */,
 				046E40A923F8F9630007EFDA /* SceneDelegate.swift */,
 				046E40AB23F8F9630007EFDA /* ContentView.swift */,
@@ -73,6 +86,7 @@
 				046E40AF23F8F9710007EFDA /* Preview Content */,
 				046E40C023F90CE50007EFDA /* Catagory.swift */,
 				046E40C223F90CFF0007EFDA /* SubCatagory.swift */,
+				0452204523FA546C00713926 /* AddCategoryView.swift */,
 			);
 			path = "expense manager";
 			sourceTree = "<group>";
@@ -162,6 +176,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0452204623FA546C00713926 /* AddCategoryView.swift in Sources */,
+				0452204923FA575500713926 /* DataServices.swift in Sources */,
 				046E40A823F8F9630007EFDA /* AppDelegate.swift in Sources */,
 				046E40AA23F8F9630007EFDA /* SceneDelegate.swift in Sources */,
 				046E40C323F90CFF0007EFDA /* SubCatagory.swift in Sources */,
@@ -314,7 +330,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shamrat.expense-manager";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -334,7 +350,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shamrat.expense-manager";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

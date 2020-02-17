@@ -9,7 +9,7 @@ import Foundation
 import RealmSwift
 
 @objcMembers
-class Catagory : Object {
+class Catagory : Object, Identifiable {
     dynamic var id = UUID().uuidString
     dynamic var name = String()
     dynamic var icon = String()
